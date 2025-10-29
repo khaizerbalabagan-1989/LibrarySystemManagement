@@ -20,16 +20,13 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        // Init views
         etEmail = findViewById(R.id.etEmail)
         etPassword = findViewById(R.id.etPassword)
         btnLogin = findViewById(R.id.btnLogin)
         btnGoRegister = findViewById(R.id.btnGoRegister)
 
-        // Init FirebaseAuth
         auth = FirebaseAuth.getInstance()
 
-        // AUTO-LOGIN: if user already signed in, go to MainActivity immediately
         val currentUser = auth.currentUser
         if (currentUser != null) {
             startActivity(Intent(this, MainActivity::class.java))
@@ -37,7 +34,6 @@ class LoginActivity : AppCompatActivity() {
             return
         }
 
-        // Normal login flow
         btnLogin.setOnClickListener {
             val email = etEmail.text.toString().trim()
             val password = etPassword.text.toString().trim()
