@@ -3,7 +3,6 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
 
-    // Added Firebase Google Services plugin
     id("com.google.gms.google-services")
 }
 
@@ -64,12 +63,9 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    // Added Firebase Authentication and Realtime Database
     implementation("com.google.firebase:firebase-auth:23.0.0")
     implementation("com.google.firebase:firebase-database:21.0.0")
     implementation("com.google.firebase:firebase-auth") //firebase auth
 
-
-    // Added Firebase BOM (manages compatible versions)
     implementation(platform("com.google.firebase:firebase-bom:33.5.1"))
 }
