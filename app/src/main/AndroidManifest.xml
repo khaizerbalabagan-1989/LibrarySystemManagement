@@ -13,7 +13,6 @@
         android:theme="@style/Theme.LibrarySystemManagement"
         tools:targetApi="31">
 
-        <!-- Launch LoginActivity first -->
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -23,10 +22,8 @@
             </intent-filter>
         </activity>
 
-        <!-- MainActivity (home screen after login) -->
         <activity android:name=".MainActivity" />
 
-        <!-- RegisterActivity -->
         <activity android:name=".RegisterActivity" />
 
     </application>
